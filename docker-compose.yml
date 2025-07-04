@@ -1,8 +1,6 @@
-version: "3.8"
-
 services:
   api-gateway:
-    build: ./api-gateway
+    build: ./backend/api-gateway
     ports:
       - "8088:8088"
     depends_on:
@@ -10,11 +8,11 @@ services:
       - event-service
 
   ticket-service:
-    build: ./ticket-service
+    build: ./backend/ticket-service
     ports:
       - "8091:8091"
 
   event-service:
-    build: ./event-service
+    build: ./backend/event-service
     ports:
       - "8092:8092"
