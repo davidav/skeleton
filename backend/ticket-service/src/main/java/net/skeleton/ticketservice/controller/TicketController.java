@@ -1,4 +1,4 @@
-package net.tickets.ticketservice.controller;
+package net.skeleton.ticketservice.controller;
 
 
 import org.springframework.beans.factory.annotation.Value;

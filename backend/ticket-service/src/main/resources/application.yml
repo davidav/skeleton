@@ -2,5 +2,7 @@ server:
   port: 8091
 
 spring:
+  application:
+    name: ticket-service
   profiles:
     active: local

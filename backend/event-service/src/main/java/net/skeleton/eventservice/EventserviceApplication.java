@@ -1,12 +1,12 @@
-package net.tickets.ticketservice;
+package net.skeleton.eventservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TicketserviceApplication {
+public class EventserviceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TicketserviceApplication.class, args);
+        SpringApplication.run(EventserviceApplication.class, args);
     }
 }

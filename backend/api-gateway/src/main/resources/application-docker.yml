@@ -1,17 +1,20 @@
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+#          issuer-uri: http://keycloak:8080/realms/skeleton
+          issuer-uri: http://host.docker.internal:9090/realms/skeleton
+
+
   cloud:
     gateway:
+      default-filters:
+        - TokenRelay
       routes:
         - id: ticket-service
           uri: http://ticket-service:8091
           predicates:
             - Path=/api/tickets/**
-          filters:
-            - StripPrefix=1
-
-        - id: event-service
-          uri: http://event-service:8092
-          predicates:
-            - Path=/api/events/**
           filters:
             - StripPrefix=1
