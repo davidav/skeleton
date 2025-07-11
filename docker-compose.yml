@@ -58,9 +58,6 @@ services:
     networks:
       - skeleton_net
 
-volumes:
-  postgres_data:
-
 networks:
   skeleton_net:
     driver: bridge

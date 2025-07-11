@@ -11,7 +11,7 @@ spring:
         registration:
           keycloak:
             client-id: api-gateway
-            client-secret: OG5hAKsICHG5BDWIBHMIhp1atYfdrAAe # Todo: Use .env file
+            client-secret: ${CLIENT_SECRET}  #.env file
             scope: openid,profile,email
             authorization-grant-type: authorization_code
         provider:
